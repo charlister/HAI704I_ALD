@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/veto/partie1/client/Client.java=UTF-8
+encoding//src/veto/partie1/serveur/Serveur.java=UTF-8
+encoding//src/veto/partie3/client/Client.java=UTF-8
+encoding//src/veto/partie3/serveur/AnimalImpl.java=UTF-8
+encoding//src/veto/partie3/serveur/CabinetImpl.java=UTF-8
+encoding//src/veto/partie3/serveur/DossierSuiviImpl.java=UTF-8
+encoding//src/veto/partie3/serveur/Serveur.java=UTF-8
+encoding//src/veto/partie3/services/Espece.java=UTF-8
+encoding//src/veto/partie3/services/IAnimal.java=UTF-8
+encoding//src/veto/partie3/services/ICabinet.java=UTF-8
+encoding//src/veto/partie3/services/IDossierSuivi.java=UTF-8
+encoding/<project>=UTF-8
