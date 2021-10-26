@@ -12,7 +12,7 @@ public class CabinetImpl extends UnicastRemoteObject implements ICabinet{
 	}
 	
 	@Override
-	public AnimalImpl trouverAnimalParNom(String nomAnimal, String nomMaitre) throws RemoteException {
+	public AnimalImpl trouverAnimalParNoms(String nomAnimal, String nomMaitre) throws RemoteException {
 		for(AnimalImpl x : patients) {
 			if (x.getNom().equals(nomAnimal) && x.getNomMaitre().equals(nomMaitre)) {
 				System.out.println("trouverAnimalParNom : " + nomAnimal + " " + nomMaitre + " existe !");
@@ -27,7 +27,7 @@ public class CabinetImpl extends UnicastRemoteObject implements ICabinet{
 	public void chargerPatient(String nomAnimal, String nomMaitre, String race, 
 			Espece espece, DossierSuiviImpl dossierSuivi) throws RemoteException {
 		/*
-		 * On consid�re que cette m�thode charge des donn�es depuis une base de donn�es.
+		 * On considère que cette m�thode charge des donn�es depuis une base de données.
 		 */
 		AnimalImpl animal = new AnimalImpl(nomAnimal, nomMaitre, race, espece, dossierSuivi);
 		patients.add(animal);

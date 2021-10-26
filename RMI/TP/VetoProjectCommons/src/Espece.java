@@ -7,7 +7,7 @@ public class Espece implements Serializable {
 	
 	public Espece() {
 		super();
-		nomEspece = "indÃ©fini";
+		nomEspece = "indéfini";
 		dureeDeVieMoyenne = 0.;
 	}
 	
