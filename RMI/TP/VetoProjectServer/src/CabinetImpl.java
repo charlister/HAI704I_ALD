@@ -4,11 +4,16 @@ import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class CabinetImpl extends UnicastRemoteObject implements ICabinet{
+	private static final int[] SEUILS = {9, 100, 500, 1000};
+	
 	private ArrayList<AnimalImpl> patients;
+	
+	private ArrayList<IConnexion> veterinaires;
 	
 	public CabinetImpl() throws RemoteException {
 		super();
 		patients = new ArrayList<AnimalImpl>();
+		veterinaires = new ArrayList<IConnexion>();
 	}
 	
 	@Override
@@ -44,6 +49,19 @@ public class CabinetImpl extends UnicastRemoteObject implements ICabinet{
 		}
 		patients.add(new AnimalImpl(nomAnimal, nomMaitre, race, espece, new DossierSuiviImpl()));
 		System.out.println("enregistrerAnimal : " + nomAnimal + " " + nomMaitre + " enregistré !");
+		for(int s : SEUILS) {
+			if(patients.size() == s) {
+				for(IConnexion c : veterinaires) {
+					c.signalerDepassement(s);
+				}
+				break;
+			}
+		}
+	}
+	
+	@Override
+	public void enregistrerConnexion(IConnexion connexion) throws RemoteException {
+		veterinaires.add(connexion);
 	}
 
 	@Override

@@ -5,4 +5,6 @@ public interface ICabinet extends Remote {
 	IAnimal trouverAnimalParNoms(String nomAnimal, String nomMaitre) throws RemoteException;
 	
 	void enregistrerAnimal(String nomAnimal, String nomMaitre, String race, Espece espece) throws RemoteException;
+
+	void enregistrerConnexion(IConnexion connexion) throws RemoteException;
 }

@@ -8,7 +8,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class Serveur {
-
+	
 	public static void main(String[] args) throws AlreadyBoundException, MalformedURLException, NotBoundException {
 		try {
 			System.setProperty("java.security.policy", "security/serveur.policy");
