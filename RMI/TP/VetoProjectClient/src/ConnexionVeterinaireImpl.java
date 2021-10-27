@@ -2,9 +2,9 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 @SuppressWarnings("serial")
-public class ConnexionImpl extends UnicastRemoteObject implements IConnexion {
+public class ConnexionVeterinaireImpl extends UnicastRemoteObject implements IConnexionVeterinaire {
 	private String identifiant;
-	protected ConnexionImpl(String identifiant) throws RemoteException {
+	protected ConnexionVeterinaireImpl(String identifiant) throws RemoteException {
 		super();
 		this.identifiant = identifiant;
 	}

@@ -13,12 +13,12 @@ public class Serveur {
 		try {
 			System.setProperty("java.security.policy", "security/serveur.policy");
 			
-			// NFS : Network File System
+//			NFS : Network File System
 //			URL url = new File("C:\\Users\\Inese\\OneDrive\\Bureau\\FAC\\UMONTPELLIER\\M1\\main\\HAI704I - Architectures Logicielles Distribuées\\RMI\\TP\\VetoProjectClient\\bin").toURI().toURL();
 //			ou
 			URL url = new File("C:\\Users\\Inese\\OneDrive\\Bureau\\FAC\\UMONTPELLIER\\M1\\main\\HAI704I - Architectures Logicielles Distribuées\\RMI\\TP\\VetoProjectClient\\downloads\\news.jar").toURI().toURL();
         	
-			System.out.println(url.toString());
+//			System.out.println(url.toString());
         	System.setProperty("java.rmi.server.codebase", url.toString());
 			System.setSecurityManager(new SecurityManager());
 			
